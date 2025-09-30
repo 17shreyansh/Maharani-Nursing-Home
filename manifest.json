@@ -1,0 +1,21 @@
+{
+  "name": "Maharani Nursing Home",
+  "short_name": "Maharani Care",
+  "description": "Professional home nursing care services with 24/7 support and compassionate care",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7fafd",
+  "theme_color": "#1a7bb7",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

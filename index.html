@@ -22,6 +22,16 @@
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#contact">Contact Us</a></li>
                 </ul>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+                <div class="mobile-menu" id="mobileMenu">
+                    <ul>
+                        <li><a href="#hero" onclick="closeMobileMenu()">Home</a></li>
+                        <li><a href="#about" onclick="closeMobileMenu()">About Us</a></li>
+                        <li><a href="#services" onclick="closeMobileMenu()">Services</a></li>
+                        <li><a href="#gallery" onclick="closeMobileMenu()">Gallery</a></li>
+                        <li><a href="#contact" onclick="closeMobileMenu()">Contact Us</a></li>
+                    </ul>
+                </div>
             </nav>
             <a href="#contact" class="btn btn-primary">Contact Us</a>
         </div>
@@ -183,11 +193,30 @@
     <section class="gallery" id="gallery">
         <div class="container">
             <h2>Gallery</h2>
-            <div class="gallery-grid">
-                <img src="img/1.jpeg" alt="Gallery Image 1">
-                <img src="img/2.jpeg" alt="Gallery Image 2">
-                <img src="img/3.jpeg" alt="Gallery Image 3">
-                <img src="img/4.jpeg" alt="Gallery Image 4">
+            <div class="gallery-container">
+                <div class="gallery-slider" id="gallerySlider">
+                    <div class="gallery-slide">
+                        <img src="img/1.jpeg" alt="Modern Patient Care Facility">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="img/2.jpeg" alt="Professional Nursing Staff">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="img/3.jpeg" alt="Comfortable Patient Rooms">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="img/4.jpeg" alt="Advanced Medical Equipment">
+                    </div>
+                </div>
+                <button class="gallery-nav gallery-prev" onclick="changeSlide(-1)">‹</button>
+                <button class="gallery-nav gallery-next" onclick="changeSlide(1)">›</button>
+                <div class="gallery-counter" id="galleryCounter">1 / 4</div>
+            </div>
+            <div class="gallery-dots" id="galleryDots">
+                <span class="gallery-dot active" onclick="currentSlide(1)"></span>
+                <span class="gallery-dot" onclick="currentSlide(2)"></span>
+                <span class="gallery-dot" onclick="currentSlide(3)"></span>
+                <span class="gallery-dot" onclick="currentSlide(4)"></span>
             </div>
         </div>
     </section>
@@ -206,5 +235,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
